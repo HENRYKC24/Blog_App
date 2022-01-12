@@ -13,9 +13,15 @@ This is a blog application that can have users write and post blogs, read blog p
 ## Getting Started
 Follow the steps bellow to get a local copy up and running.
 
-Run `git clone https://github.com/HENRYKC24/Hello-Rails.git` from your terminal to clone the repo from GitHub.
+Run `git clone https://github.com/HENRYKC24/Blog-App.git` from your terminal to clone the repo from GitHub.
+
+Run `cd blog-app` to move to the project folder.
 
 Run `yarn install` from the command line to install dependencies.
+
+Run `rails db:create`, and `rails db:migrate` to create database.
+
+Run `rails db:seed` to populate the database with the data in the seed file.
 
 Run `rails s` to run the local server
 
