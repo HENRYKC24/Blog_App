@@ -3,15 +3,15 @@
 
 # Blog App
 
-This is a blog application that can have users post write and post blogs, read blog posts, and edit or delete the posts.
+This is a blog application that can have users write and post blogs, read blog posts, and edit or delete the posts.
 
 ## Built With
 
 - Ruby/Rails
-- Postgres
+- PostgreSQL
 
 ## Getting Started
-Follow the speps bellow to get a local copy up and running.
+Follow the steps bellow to get a local copy up and running.
 
 Run `git clone https://github.com/HENRYKC24/Hello-Rails.git` from your terminal to clone the repo from GitHub.
 
