@@ -4,7 +4,7 @@ class Post < ApplicationRecord
   has_many :comments
 
   def update_posts_counter
-    Post.find_by(:id :id).count.update
+    Post.find_by(:id, post_id).count.update
   end
 
   def last_5_comments
