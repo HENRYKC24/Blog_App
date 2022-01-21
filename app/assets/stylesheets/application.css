@@ -1,24 +1,9 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
- .show-container {
-   margin-top: 50px;
- }
+.show-container {
+  margin-top: 50px;
+}
 
- .users,
- .user-posts {
+.users,
+.user-posts {
   list-style-type: none;
 }
 
@@ -80,6 +65,10 @@
   font-weight: bolder;
 }
 
+.posts-home {
+  margin-top: 50px;
+}
+
 .posts-container,
 .user-posts {
   list-style-type: none;
@@ -91,8 +80,7 @@
   padding: 0;
 }
 
-.post,
-.user-comments {
+.post {
   list-style-type: none;
   border: 2px solid;
   padding: 5px;
@@ -115,7 +103,10 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: -28px;
+  list-style-type: none;
+  /* border: 2px solid; */
+  padding: 5px;
+  margin-bottom: 30px;
 }
 
 .pagination-btn {
@@ -127,4 +118,27 @@
 .link {
   color: black;
   text-decoration: none;
+}
+
+.name-comments-likes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.comments-wrapper {
+  border: 2px solid;
+  margin-top: -26px;
+  margin-bottom: 30px;
+}
+
+.top {
+  border: 2px solid;
+  margin: 7% 6% 0;
+  padding: 5px;
+}
+
+.comment-list {
+  border: 2px solid;
+  margin: 3px 6%;
 }
