@@ -18,6 +18,18 @@
   list-style-type: none;
 }
 
+.users a {
+  text-decoration: none;
+}
+
+.users a:visited {
+  color: black;
+}
+
+.users a:link {
+  color: black;
+}
+
 .user {
   display: flex;
   flex-direction: row;
