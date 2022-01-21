@@ -1,17 +1,13 @@
 
 <section class="show-container">
-  <%= render :partial => 'image_and_user', locals: {user: @user} %>
+  <%= render :partial => 'partials/image_and_user', locals: {user: @user} %>
   <div class="bio">
-    <h2 class="bio-heading">Bio</h2>
-    <p class="bio-text"><%= @user.bio %></p>
+  <h2 class="bio-heading">Bio</h2>
+  <p class="bio-text"><%= @user.bio %></p>
   </div>
   <ul class="posts-container">
     <% @posts.reverse.each do |post| %>
-      <li class="post">
-        <h2 class="post-title"><%= post.title %></h2>
-        <p class="post-text"><%= post.text %></p>
-        <p class="comments-likes">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
-      </li>
+      <%= render :partial => 'partials/post', locals: {post: post} %>
     <% end %>
   </ul>
   <button class="see-all-btn">
