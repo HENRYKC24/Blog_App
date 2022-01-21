@@ -3,10 +3,10 @@
   <ul class="users">
   <% @users.each do |user| %>
     <%= link_to user_path(user.id) do %>
-    <li class="user">
+      <li class="user">
         <%= render :partial => 'partials/image_and_user', locals: { user: user } %>
-        </li>
-        <% end %>
+      </li>
     <% end %>
+  <% end %>
   </ul>
 </section>
