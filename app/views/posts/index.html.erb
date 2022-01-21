@@ -3,7 +3,7 @@
   <%= render :partial => 'partials/image_and_user', locals: { user: @user } %>
   <ul class="user-posts">
     <% @posts.each do |post| %>
-      <%= link_to user_post_path(@user.id, post.id), id: "user_post#{post.id}" do %>
+      <%= link_to user_post_path(@user.id, post.id), id: "user_post#{post.id}", :class => 'link' do %>
         <%= render :partial => 'partials/post', locals: { post: post } %>
         <% if post.comments.length > 0 %>
           <ul class="user-comments">

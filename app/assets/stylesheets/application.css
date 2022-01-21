@@ -123,3 +123,8 @@
   margin: auto;
   margin-bottom: 50px;
 }
+
+.link {
+  color: black;
+  text-decoration: none;
+}
