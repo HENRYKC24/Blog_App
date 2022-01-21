@@ -17,7 +17,8 @@
    margin-top: 50px;
  }
 
- .users {
+ .users,
+ .user-posts {
   list-style-type: none;
 }
 
@@ -79,7 +80,8 @@
   font-weight: bolder;
 }
 
-.posts-container {
+.posts-container,
+.user-posts {
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -89,8 +91,9 @@
   padding: 0;
 }
 
-.post {
-
+.post,
+.user-comments {
+  list-style-type: none;
   border: 2px solid;
   padding: 5px;
   margin-bottom: 30px;
@@ -106,4 +109,17 @@
   margin: auto;
   margin-bottom: 50px;
   padding: 0;
+}
+
+.user-comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: -28px;
+}
+
+.pagination-btn {
+  display: flex;
+  margin: auto;
+  margin-bottom: 50px;
 }
