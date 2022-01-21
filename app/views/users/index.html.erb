@@ -1,15 +1,10 @@
 
 <section>
-<ul class="users">
-<% 6.times { %>
-  <li class="user">
-    <%= image_tag "profile.jpg", :class => "avatar" %>
-   <div class="name-posts">
-   <%= render :partial => 'ur/kdkd/form', locals: { post: @post } %>
-    <p class="username">User Name</p>
-    <p class="num-of-posts">Number of posts</p>
-   </div>
-  </li>
-<% } %>
-</ul>
+  <ul class="users">
+    <% @users.each do |user| %>
+      <li class="user">
+        <%= render :partial => 'image_and_user', locals: { user: user } %>
+      </li>
+    <% end %>
+  </ul>
 </section>
