@@ -1,4 +1,23 @@
 
 <section>
   <%= render :partial => 'partials/image_and_user', locals: { user: @user } %>
+  <ul class="user-posts">
+    <% @posts.each do |post| %>
+      <%= link_to user_post_path(@user.id, post.id), id: "user_post#{post.id}" do %>
+        <%= render :partial => 'partials/post', locals: { post: post } %>
+        <% if post.comments.length > 0 %>
+          <ul class="user-comments">
+            <% post.comments.slice(0, 5).each do |comment| %>
+              <li class="comment-li">
+                <strong><%= comment.author.name %>: </strong><%= comment.text %>
+              </li>
+            <% end %>
+          </ul>
+        <% end%>
+      <% end %>
+    <% end %>
+  </ul>
+  <button class="pagination-btn">
+    <%= link_to "Pagination", user_posts_path(@user) %>
+  </button>
 </section>
