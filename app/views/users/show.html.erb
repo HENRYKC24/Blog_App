@@ -1,39 +1,20 @@
 
-<section>
+<section class="show-container">
  <%= render :partial => 'image_and_user', locals: {user: @user} %>
+ <div class="bio">
+  <h2 class="bio-heading">Bio</h2>
+  <p class="bio-text"><%= @user.bio %></p>
+ </div>
+ <ul class="posts-container">
+    <% @posts.reverse.each do |post| %>
+      <li class="post">
+        <h2 class="post-title"><%= post.title %></h2>
+        <p class="post-text"><%= post.text %></p>
+        <p class="comments-likes">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
+      </li>
+    <% end %>
+ </ul>
+ <button class="see-all-btn"><%= link_to "See all posts", user_posts_path(@user), class: "see_all" %></button>
 </section>
 
 
-
-# <div class="user-container d-flex">
-# <div class="user-img">
-#   <%= image_tag("profile.png", width:'100%', height:'100%') %>
-# </div>
-# <div class="user-data d-flex">
-#   <h2><%= @user.name %></h2>
-#   <p>
-#     <a href="/users/<%=@user.id%>/posts/">Number of posts: <%= @posts.length %></a>
-#   </p>
-# </div>
-# </div>
-
-# <div class="bio-data">
-# <h2 class="bio-span">Bio</h2>
-# <p class="bio-body"><%= @user.bio %></p>
-# </div>
-
-# <div class="recent-posts">
-# <% @posts.each do |post| %>
-# <div class="recent-posts posts-details d-flex">
-#   <h2>
-#    <a href="/users/<%=@user.id%>/posts/<%=post.id%>"><%= post.title%></a>
-#   </h2>
-#   <p class="posts-body"><%= post.text %></p>
-#   <p class="posts-counters">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
-# </div>
-# <%end %>
-# </div>
-
-# <div class="see-posts d-flex">
-# <a href="/users/<%=@user.id%>/posts/">See all posts</a>
-# </div>
