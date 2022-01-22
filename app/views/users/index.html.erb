@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Henrys Portfolio</title>
-    </head>
-  <body>
-    <h1>Hello Users Home Page!</h1>
-  </body>
-</html>
+
+<section>
+  <ul class="users">
+  <% @users.each do |user| %>
+    <%= link_to user_path(user.id) do %>
+      <li class="user">
+        <%= render :partial => 'partials/image_and_user', locals: { user: user } %>
+      </li>
+    <% end %>
+  <% end %>
+  </ul>
+</section>

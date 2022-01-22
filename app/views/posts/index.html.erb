@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Henrys Portfolio</title>
-    </head>
-  <body>
-    <h1>Hello Posts Home!</h1>
-  </body>
-</html>
+
+<section class="posts-home">
+  <%= render :partial => 'partials/image_and_user', locals: { user: @user } %>
+  <ul class="user-posts">
+    <% @posts.reverse.each do |post| %>
+      <%= link_to user_post_path(@user.id, post.id), id: "user_post#{post.id}", :class => 'link' do %>
+        <%= render :partial => 'partials/post', locals: { post: post } %>
+        <% if post.comments.length > 0 %>
+          <div class="comments-wrapper">
+            <%= render :partial => 'partials/comments', locals: { comments: post.comments.slice(0, 5), all: true } %>
+          </div>
+        <% end%>
+      <% end %>
+    <% end %>
+  </ul>
+  <button class="pagination-btn">
+    <%= link_to "Pagination", user_posts_path(@user) %>
+  </button>
+</section>

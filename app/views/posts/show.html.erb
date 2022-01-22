@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Henrys Portfolio</title>
-    </head>
-  <body>
-    <h1>Hello Show Post!</h1>
-  </body>
-</html>
+<section class="posts-details">
+  <div class="top">
+    <div class="name-comments-likes">
+      <p class="name"><strong><%= @post.title %></strong> by <strong><%= @post.author.name %></strong></p>
+      <p class="comments-likes">Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %> likes</p>
+    </div>
+    <p class="post-text"><%= @post.text %></p>
+  </div>
+  <% if @post.comments.length > 0 %>
+  <div class="comment-list">
+    <%= render :partial => 'partials/comments', locals: { comments: @post.comments } %>
+  </div>
+  <% end %>
+</section>

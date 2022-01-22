@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Henrys Portfolio</title>
-    </head>
-  <body>
-    <h1>Hello Show User!</h1>
-  </body>
-</html>
+
+<section class="show-container">
+  <%= render :partial => 'partials/image_and_user', locals: {user: @user} %>
+  <div class="bio">
+  <h2 class="bio-heading">Bio</h2>
+  <p class="bio-text"><%= @user.bio %></p>
+  </div>
+  <ul class="posts-container">
+    <% @posts.reverse.each do |post| %>
+      <%= render :partial => 'partials/post', locals: {post: post} %>
+    <% end %>
+  </ul>
+  <button class="see-all-btn">
+    <%= link_to "See All Posts", user_posts_path(@user) %>
+  </button>
+</section>
