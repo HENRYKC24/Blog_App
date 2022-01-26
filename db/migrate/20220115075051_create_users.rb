@@ -8,6 +8,5 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.integer :posts_counter
       t.timestamps 
     end
-  
   end
 end
