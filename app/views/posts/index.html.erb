@@ -1,4 +1,3 @@
-
 <section class="posts-home">
   <%= render :partial => 'partials/image_and_user', locals: { user: @user } %>
   <ul class="user-posts">
@@ -13,6 +12,7 @@
       <% end %>
     <% end %>
   </ul>
+  
   <button class="pagination-btn">
     <%= link_to "Pagination", user_posts_path(@user) %>
   </button>
