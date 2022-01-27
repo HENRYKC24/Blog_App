@@ -12,5 +12,6 @@
     <%= render :partial => 'partials/comments', locals: { comments: @post.comments } %>
   </div>
   <% end %>
-  
+  <%= render "comments/form" %>
+  <%= render "likes/form" %>
 </section>

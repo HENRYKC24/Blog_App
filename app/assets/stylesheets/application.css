@@ -138,3 +138,11 @@
   border: 2px solid;
   margin: 3px 6%;
 }
+
+.comment-box {
+  margin: 2% 6% 0;
+}
+
+.likes-box {
+  margin: 1% 6% 0;
+}
