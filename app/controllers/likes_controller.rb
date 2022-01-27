@@ -6,11 +6,10 @@ class LikesController < ApplicationController
       format.html do
         if @like.save
           flash[:success] = 'You have successfully liked this post.'
-          redirect_to user_post_path(@post.author.id, @post.id)
         else
           flash.now[:error] = 'Error: like could not be saved'
-          redirect_to user_post_path(@post.author.id, @post.id)
         end
+        redirect_to user_post_path(@post.author.id, @post.id)
       end
     end
   end
