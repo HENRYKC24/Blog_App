@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   describe 'Validaiton tests for user' do
-    subject { User.new(name: 'Henry Kc', photo: 'profile.png', bio: "Henry the great", posts_counter: 0) }
+    subject { User.new(name: 'Henry Kc', photo: 'profile.png', bio: 'Henry the great', posts_counter: 0) }
     before { subject.save }
 
     it 'Shuold have name present' do
