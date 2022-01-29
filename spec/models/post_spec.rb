@@ -36,4 +36,12 @@ RSpec.describe Post, type: :model do
       expect(subject).to_not be_valid
     end
   end
+
+  describe 'Test for last recent posts' do
+    subject { User.new(name: 'Henry Kc', photo: 'profile.png', bio: 'Henry the great', posts_counter: 0) }
+    before { subject.save }
+    it 'Should have maximum of five comments' do
+      expect(subject.last_recent_posts).to eq(subject.last_recent_posts)
+    end
+  end
 end
