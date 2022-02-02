@@ -1,17 +1,17 @@
 <div>
-<ul class="user-comments">
-  <% comments.each do |comment| %>
-    <li class="comment-li">
-      <strong><%= comment.author.name %>: </strong><%= comment.text %>
-    </li>
-  <% end %>
-</ul>
+  <ul class="user-comments">
+    <% comments.each do |comment| %>
+      <li class="comment-li">
+        <strong><%= comment.author.name %>: </strong><%= comment.text %>
+      </li>
+    <% end %>
+  </ul>
  <button>
     <% if can? :destroy, comment %>
-    <%= link_to 'Delete Comment', 
-        delete_comment_path(current_user.id, @post.id, comment.id),
-       method: :delete, 
+      <%= link_to 'Delete Comment', 
+      delete_comment_path(current_user.id, @post.id, comment.id),
+        method: :delete, 
         data: {confirm: 'Are You Sure You Want to Delete This comment'} %>
     <% end %>
-   </button>
+  </button>
 </div>
