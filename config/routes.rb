@@ -13,4 +13,6 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
     resources :likes, only: [:create]
   end
+
+  delete 'users/:user_id/posts/:post_id/delete_comment/:id', to: 'comments#delete', as: 'delete_comment'
 end
