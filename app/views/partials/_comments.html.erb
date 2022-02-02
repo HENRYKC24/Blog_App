@@ -1,4 +1,4 @@
-
+<div>
 <ul class="user-comments">
   <% comments.each do |comment| %>
     <li class="comment-li">
@@ -6,3 +6,12 @@
     </li>
   <% end %>
 </ul>
+ <button>
+    <% if can? :destroy, comment %>
+    <%= link_to 'Delete Comment', 
+        delete_comment_path(current_user.id, @post.id, comment.id),
+       method: :delete, 
+        data: {confirm: 'Are You Sure You Want to Delete This comment'} %>
+    <% end %>
+   </button>
+</div>

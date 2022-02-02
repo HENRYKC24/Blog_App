@@ -1,6 +1,16 @@
 
-<li class="post">
-  <h2 class="post-title"><%= post.title %></h2>
-  <p class="post-text"><%= post.text.first(200) + '...' %></p>
-  <p class="comments-likes">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
-</li>
+<div class="del-post-btn">
+  <li class="post">
+    <h2 class="post-title"><%= post.title %></h2>
+    <p class="post-text"><%= post.text.first(200) + '...' %></p>
+    <p class="comments-likes">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
+  </li>
+  <button>
+    <% if can? :destroy, @post %>
+      <%= link_to 'Delete Post', 
+      user_post_path(current_user.id), 
+      method: :delete, 
+      data: {confirm: 'Are You Sure You Want to Delete This Post'} %>
+    <% end %>
+  </button>
+</div>
