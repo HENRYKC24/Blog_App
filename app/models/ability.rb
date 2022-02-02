@@ -10,16 +10,6 @@ class Ability
     #   else
     #     can :read, :all
     #   end
-
-    user ||= User.new 
-    if user.admin?
-      can :manage, :all
-    else
-      can :manage, Post, user_id: user.id
-      can :manage, Comment, user_id: user.id
-      can :read, :all
-    end
-
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.

@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   before_action :update_allowed_parameters, if: :devise_controller?
 
-  before_action :authenticate_admin!
+  before_action :authenticate_user!
 
   protected
 
