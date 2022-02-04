@@ -28,7 +28,12 @@ Run `rails s` to run the local server
 Check your browser at `http://localhost:3000/`
 
 
-## Author
+## Authors
+
+👤 **Tufoin Nkuo**
+* GitHub: [@tufoinnkuo10](https://github.com/tufoinnkuo10)
+* Twitter: [@itztenten](https://twitter.com/itztenten)
+* LinkedIn: [@tufoinnkuo10](https://www.linkedin.com/in/tufoin-nkuo-3b272320b)
 
 👤 **Henry Kc**
 
