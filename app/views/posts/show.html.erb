@@ -1,5 +1,6 @@
 
 <section class="posts-details">
+<%=button_to 'Delete', {:controller => :posts, :action => 'destroy', :id => @post.id}, :method => :delete%> 
   <div class="top">
     <div class="name-comments-likes">
       <p class="name"><strong><%= @post.title %></strong> by <strong><%= @post.author.name %></strong></p>
@@ -9,7 +10,14 @@
   </div>
   <% if @post.comments.length > 0 %>
   <div class="comment-list">
-    <%= render :partial => 'partials/comments', locals: { comments: @post.comments } %>
+<ul class="user-comments">
+  <% @post.comments.each do |comment| %>
+    <li class="comment-li">
+      <strong><%= comment.author.name %>: </strong><%= comment.text %>
+    </li>
+     <%=button_to 'delete', post_comment_path(post_id: @post.id ,id: comment.id), :method => :delete%> 
+  <% end %>
+</ul>
   </div>
   <% end %>
   <%= render "comments/form" %>

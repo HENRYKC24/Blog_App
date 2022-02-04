@@ -31,7 +31,6 @@ Check your browser at `http://localhost:3000/`
 ## Authors
 
 👤 **Tufoin Nkuo**
-
 * GitHub: [@tufoinnkuo10](https://github.com/tufoinnkuo10)
 * Twitter: [@itztenten](https://twitter.com/itztenten)
 * LinkedIn: [@tufoinnkuo10](https://www.linkedin.com/in/tufoin-nkuo-3b272320b)
@@ -41,7 +40,6 @@ Check your browser at `http://localhost:3000/`
 - GitHub: [@githubhandle](https://github.com/henrykc24)
 - Twitter: [@twitterhandle](https://twitter.com/henrykc24)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/henry-kc)
-
 
 ## 🤝 Contributing
 

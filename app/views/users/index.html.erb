@@ -1,4 +1,5 @@
-
+    <%if user_signed_in?%>
+<%= button_to "logout2", destroy_user_session_path, method: :delete  %>
 <section>
   <ul class="users">
   <% @users.each do |user| %>
@@ -12,3 +13,7 @@
   </ul>
   
 </section>
+
+ <%else%>
+     <%= render partial: "unsinged"%>
+    <%end %>

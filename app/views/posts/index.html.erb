@@ -6,7 +6,11 @@
         <%= render :partial => 'partials/post', locals: { post: post } %>
         <% if post.comments.length > 0 %>
           <div class="comments-wrapper">
-            <%= render :partial => 'partials/comments', locals: { comments: post.comments.slice(0, 5), all: true } %>
+              <% post.recent_comments.each do |comment| %>
+               <li class="comment-li">
+              <strong><%= comment.author.name %>: </strong><%= comment.text %>
+               </li>
+           <% end %>
           </div>
         <% end%>
       <% end %>
