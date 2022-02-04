@@ -1,2 +1,8 @@
-
-
+<ul class="user-comments">
+  <% comments.each do |comment| %>
+    <li class="comment-li">
+      <strong><%= comment.author.name %>: </strong><%= comment.text %>
+    </li>
+     <%=button_to 'delete', post_comment_path(post_id: @post.id ,id: comment.id), :method => :delete%> 
+  <% end %>
+</ul>
