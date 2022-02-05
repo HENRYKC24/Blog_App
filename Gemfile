@@ -49,6 +49,9 @@ gem 'database_cleaner'
 
 gem 'devise-jwt'
 
+gem 'rswag'
+
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
