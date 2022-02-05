@@ -33,9 +33,7 @@ RSpec.feature 'User page', js: true, type: :feature do
       users = User.all
       visit users_path
       users.each do |_user|
-        expect(page.body).to
-        include('<img class="avatar"
-        src="/assets/profile-b5574d48bf28eec6ac41fb76c558ac3415665791f266fd2f04ae2335a0b0cecd.png">')
+        expect(page.body).to include('<img class="avatar" src="/assets/profile-b5574d48bf28eec6ac41fb76c558ac3415665791f266fd2f04ae2335a0b0cecd.png">')
       end
     end
 
