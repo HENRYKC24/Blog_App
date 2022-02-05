@@ -22,7 +22,7 @@ RSpec.describe 'User Index features', type: :feature do
 
   describe 'all test' do
     it 'I can see the the post title.' do
-      expect(page).to have_content("Food")
+      expect(page).to have_content('Food')
     end
 
     it 'I can see the user\'s username.' do

@@ -1,6 +1,5 @@
 require 'rails_helper'
 # rubocop:disable Metrics/BlockLength
-
 RSpec.feature 'User page', js: true, type: :feature do
   background do
     visit new_user_session_path
@@ -33,8 +32,10 @@ RSpec.feature 'User page', js: true, type: :feature do
     it 'has each user profile picture' do
       users = User.all
       visit users_path
-      users.each do |user|
-        expect(page.body).to include("<img class=\"avatar\" src=\"/assets/profile-b5574d48bf28eec6ac41fb76c558ac3415665791f266fd2f04ae2335a0b0cecd.png\">")
+      users.each do |_user|
+        expect(page.body).to
+        include('<img class="avatar"
+        src="/assets/profile-b5574d48bf28eec6ac41fb76c558ac3415665791f266fd2f04ae2335a0b0cecd.png">')
       end
     end
 
@@ -55,3 +56,4 @@ RSpec.feature 'User page', js: true, type: :feature do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

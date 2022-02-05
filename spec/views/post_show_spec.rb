@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+# rubocop:disable Metrics/BlockLength
 RSpec.feature 'post show page', js: true, type: :feature do
   background do
     visit user_session_path
@@ -63,3 +63,4 @@ RSpec.feature 'post show page', js: true, type: :feature do
     expect(page).to have_content 'Big like'
   end
 end
+# rubocop:enable Metrics/BlockLength

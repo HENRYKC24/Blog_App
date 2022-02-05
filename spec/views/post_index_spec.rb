@@ -1,7 +1,7 @@
 require 'rails_helper'
 # rubocop:disable Metrics/BlockLength
-
-RSpec.feature 'Post #Index', type: :feature do
+RSpec.feature 'Post #Index',
+              type: :feature do
   background do
     visit new_user_session_path
     @first_user = User.create(name: 'Mark', photo: 'photos_url',
@@ -55,7 +55,9 @@ RSpec.feature 'Post #Index', type: :feature do
 
   it 'sees the post comments count' do
     visit user_posts_path(@first_user.id)
-    expect(page).to have_content("Comments: #{@mark_post.comments_counter}")
+    expect(page).to have_content(
+      "Comments: #{@mark_post.comments_counter}"
+    )
   end
 
   it 'sees the post likes count' do
@@ -74,5 +76,4 @@ RSpec.feature 'Post #Index', type: :feature do
     expect(page).to have_current_path(user_post_path(@first_user, @mark_post))
   end
 end
-
 # rubocop:enable Metrics/BlockLength

@@ -73,13 +73,12 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   # gem 'capybara'
   gem 'rails-controller-testing'
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
   gem 'rspec-rails', '>= 5.0.2'
+  gem 'webdrivers'
 end
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem "capybara"
-  gem "selenium-webdriver"
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
