@@ -6,13 +6,14 @@ class Api::V1::CommentsController < ApplicationController
     @comments = Comment.where({ post_id: new_id }).order(:created_at)
     render json: { data: { comments: @comments } }, status: :ok
   end
-  
+
   private
 
   def comment_parameters
     params.require(:comment).permit(:text)
   end
 end
+
 def create
   @post = Post.find(params[:post_id])
   @comment = @post.comments.new(text: comment_parameters[:text], author_id: current_user.id, post_id: @post.id)
