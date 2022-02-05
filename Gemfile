@@ -47,6 +47,8 @@ gem 'bullet'
 
 gem 'database_cleaner'
 
+gem 'devise-jwt'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
